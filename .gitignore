@@ -1,3 +1,4 @@
 .myenv/
 .python-version
 .ipynb_checkpoints/
+src/__pycache__/
