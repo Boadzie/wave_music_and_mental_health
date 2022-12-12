@@ -6,14 +6,14 @@ async def app_layout(q: Q):
         box="",
         themes=[
             ui.theme(
-                name="my-awesome-theme",
-                primary="#13ebe7",
+                name="cool7",
+                primary="#ffffff",
                 text="#ffffff",
-                card="#12123b",
-                page="#070b1a",
+                card="#111111",
+                page="#ffffff",
             )
         ],
-        # theme="my-awesome-theme",
+        theme="cool7",
         layouts=[
             ui.layout(
                 breakpoint="xs",
@@ -58,8 +58,8 @@ async def app_layout(q: Q):
 async def home(q: Q):
     q.page["header"] = ui.header_card(
         box=ui.box("header", width="100%", height="80px"),
-        icon="home",
-        icon_color="white",
+        icon="HealthRefresh",
+        color="primary",
         title="Music and its effect on Mental Health",
         subtitle="Can music impact mental health? Let's find out",
     )

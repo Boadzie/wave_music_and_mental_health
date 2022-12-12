@@ -5,7 +5,7 @@ import plotly.express as px
 import plotly.io as pio
 from plotly import graph_objects as go
 
-pio.templates.default = "ggplot2"
+pio.templates.default = "plotly_dark"
 
 
 def update_chart(fig):
@@ -23,7 +23,7 @@ async def show_table(df):
         # Add pagination attribute to make your table paginated.
         pagination=ui.table_pagination(total_rows=100, rows_per_page=5),
         events=["page_change"],
-        columns=[ui.table_column(searchable=True, name=x, label=x) for x in df.columns.tolist()],
+        columns=[ui.table_column(name=x, label=x) for x in df.columns.tolist()],
         rows=[ui.table_row(name=str(i), cells=list(map(str, df.values.tolist()[i]))) for i in df.index[0:100]],
     )
 
