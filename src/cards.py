@@ -48,6 +48,7 @@ async def app_layout(q: Q):
                             ),
                         ],
                     ),
+                    ui.zone("depression"),
                     ui.zone("footer"),
                 ],
             ),
@@ -60,7 +61,7 @@ async def home(q: Q):
         box=ui.box("header", width="100%", height="80px"),
         icon="HealthRefresh",
         color="primary",
-        title="Music and its effect on Mental Health",
+        title="Music's effect on Mental Health",
         subtitle="Can music impact mental health? Let's find out",
     )
 

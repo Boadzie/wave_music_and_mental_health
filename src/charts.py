@@ -70,18 +70,18 @@ async def fav_age_effect(df):
 async def fav_depression(df):
     fig = df >> call(
         px.histogram,
-        y="insomnia",
         x="fav_genre",
+        y="depression",
         color="music_effects",
         data_frame=_,
         text_auto=True,
         histfunc="avg",
         barmode="group",
-        title="Music Effect on Listeners - Insomnia",
-        labels={"fav_genre": "Fav Genre", "insomnia": "Insomnia"},
+        title="Music Effect on Listeners - Depression",
+        labels={"fav_genre": "Fav Genre", "depression": "Depression"},
     )
 
-    fig.update_yaxes(title="Insomnia", range=[0, 10])
+    fig.update_yaxes(title="Depression", range=[0, 10])
     update_chart(fig)
     html = pio.to_html(fig, config=None, auto_play=True, include_plotlyjs=True)
     return html
