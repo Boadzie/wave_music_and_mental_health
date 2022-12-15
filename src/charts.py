@@ -31,20 +31,20 @@ async def show_table(df):
 async def age_hist(df):
     fig = df >> call(px.histogram, x="age", data_frame=_, labels={"age": "Age"})
     update_chart(fig)
-    html = pio.to_html(fig, config=None, auto_play=True, include_plotlyjs=True)
+    html = pio.to_html(fig, config=None, auto_play=True, include_plotlyjs="cdn")
     return html
 
 
 async def streaming_service(df):
     fig = df >> call(
         px.histogram,
-        y="primary_streaming_service",
+        x="primary_streaming_service",
         data_frame=_,
         labels={"primary_streaming_service": "Primary Streaming Service"},
     )
-    fig.update_yaxes(categoryorder="total descending")
+    fig.update_xaxes(categoryorder="total descending")
     update_chart(fig)
-    html = pio.to_html(fig, config=None, auto_play=True, include_plotlyjs=True)
+    html = pio.to_html(fig, config=None, auto_play=True, include_plotlyjs="cdn")
     return html
 
 
@@ -63,7 +63,7 @@ async def fav_age_effect(df):
     )
 
     update_chart(fig)
-    html = pio.to_html(fig, config=None, auto_play=True, include_plotlyjs=True)
+    html = pio.to_html(fig, config=None, auto_play=True, include_plotlyjs="cdn")
     return html
 
 
@@ -83,5 +83,25 @@ async def fav_depression(df):
 
     fig.update_yaxes(title="Depression", range=[0, 10])
     update_chart(fig)
-    html = pio.to_html(fig, config=None, auto_play=True, include_plotlyjs=True)
+    html = pio.to_html(fig, config=None, auto_play=True, include_plotlyjs="cdn")
+    return html
+
+
+async def fav_insomnia(df):
+    fig = df >> call(
+        px.histogram,
+        y="insomnia",
+        x="fav_genre",
+        color="music_effects",
+        data_frame=_,
+        text_auto=True,
+        histfunc="avg",
+        barmode="group",
+        title="Music Effect on Listeners - Insomnia",
+        labels={"fav_genre": "Fav Genre", "insomnia": "Insomnia"},
+    )
+
+    fig.update_yaxes(title="Insomnia", range=[0, 10])
+    update_chart(fig)
+    html = pio.to_html(fig, config=None, auto_play=True, include_plotlyjs="cdn")
     return html
