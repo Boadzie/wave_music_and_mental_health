@@ -62,4 +62,12 @@ async def serve(q: Q):
         content=await fav_insomnia(df=music),
     )
 
+    q.page["foot"] = ui.markdown_card(
+        box="1 12 10 1",
+        title="",
+        content="""<br/>**[Daniel Boadzie](https://www.linkedin.com/in/boadzie/) -
+        The dataset for this project was obtained from [kaggle](https://www.kaggle.com/code/totoro29/music-and-mental-condition/notebook)**
+        """,
+    )
+
     await q.page.save()
