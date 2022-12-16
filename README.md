@@ -2,6 +2,8 @@
 
 ![music and mental Health](music_and_mental_health.gif)
 
+## Introduction
+
 > This project aims to investigate the relationship between music and mental health. We will be looking at how different types of music can affect an individual's mood and overall psychological well-being. The dataset from [Kaggle](https://www.kaggle.com/datasets/catherinerasgaitis/mxmh-survey-results)
 >
 > The ultimate goal is to gain a better understanding of the ways in which music can be used as a tool to promote mental health and well-being. We hope that the insights gained from this project will be useful for individuals looking to incorporate music into their self-care routines, as well as for professionals working in the field of mental health.
@@ -66,4 +68,4 @@ source .myenv/bin/activate
 wave run app_grid.py
 ```
 
-4. Point our browser to `http://localhost:10101` to view the app.
+4. Point your browser to `http://localhost:10101` to view the app.
