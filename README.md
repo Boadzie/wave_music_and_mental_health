@@ -53,7 +53,7 @@ Once we have completed all of the above steps and built the dashboard, we will b
 1. create a virtual environment with the command:
 
 ```bash
-python3 -m venv .myenv
+pip -m venv .myenv
 ```
 
 2. Activate the virtual environment
@@ -62,10 +62,16 @@ python3 -m venv .myenv
 source .myenv/bin/activate
 ```
 
-3. Navigate to the `src` folder and run:
+3. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+4. Navigate to the `src` folder and run:
 
 ```bash
 wave run app_grid.py
 ```
 
-4. Point your browser to `http://localhost:10101` to view the app.
+5. Point your browser to `http://localhost:10101` to view the app.
