@@ -71,7 +71,7 @@ pip install -r requirements.txt
 4. Navigate to the `src` folder and run:
 
 ```bash
-wave run app_grid.py
+wave run app.py
 ```
 
 5. Point your browser to `http://localhost:10101` to view the app.
