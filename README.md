@@ -42,7 +42,7 @@ Once the data is cleaned and ready to go, we will start manipulating and analyzi
 
 After analyzing the data, we will use the seaborn and Plotly libraries to create visualizations of the results. These visualizations will help us to better understand the patterns and trends in the data, and will also be useful for presenting our findings to others.
 
-### Step 5: Build a dashboard to present your finds using `h2o_wave` (available in the `src` folder)
+### Step 5: Build a dashboard to present your findings using `h2o_wave` (available in the `src` folder)
 
 In the final step of the project, we will use the h2o_wave library to build a dashboard to present our findings. A dashboard is a user-friendly interface that allows users to interact with and explore the data and results of our analysis. We will be using [h2o_wave](https://wave.h2o.ai/), which is a fast and simple dashboard tool for Python created by [h2o.ai](https://h2o.ai/)
 
